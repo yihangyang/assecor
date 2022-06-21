@@ -1,0 +1,17 @@
+<div class="main">
+  <ul class="cards">
+    <ng-container *ngFor="let movie of movies">
+      <li class="cards_item">
+        <div class="card" [routerLink]="'/movie/' + movie.episode_id">
+          <div class="card_image"><img [src]=pic_url></div>
+          <div class="card_content">
+            <h2 class="card_title">{{movie.title}}</h2>
+            <p class="card_text">{{movie.director}}</p>
+            <button class="btn card_btn" (click)="this.readmore">Read More</button>
+            <!-- <div *ngFor="let planets of movie.planets">planets</div> -->
+          </div>
+        </div>
+      </li>
+    </ng-container>
+  </ul>
+</div>
